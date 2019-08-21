@@ -1,0 +1,12 @@
+.button {
+	padding: 12px 18px;
+	background: $main-accent;
+	color: #ffffff;
+	border: unset;
+	font-size: 16px;
+	transition: 0.4s;
+	&:hover {
+		transition: 0.4s;
+		background: darken($main-accent, 20%);
+	}
+}
