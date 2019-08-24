@@ -18,7 +18,7 @@ export default class Image extends Component {
 		this.setState({
 			active: !this.state.active,
 		})
-	}s
+	}
 
 	handleMouseLeave(){
 		this.setState({

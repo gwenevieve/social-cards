@@ -31,12 +31,40 @@
 					background: $main-accent;
 					color: white;
 					font-size: 14px;
-				
+			}
+			.list-delete {
+				float: right;
+				color: $main-accent;
+					&:hover {
+					color: darken($main-accent, 20%);
+					cursor: pointer;
+				}
 			}
 		}
 	}
 	&-actions {
 		display: flex;
-    justify-content: center;
+		flex-direction: column;
+		justify-content: center;
+		&.row {
+			flex-direction: row;
+		}
+		input {
+			height: 42px;
+			margin-bottom: 20px;
+			&::placeholder {
+				padding-left: 10px;
+				font-size: 14px;
+			}
+			&:focus {
+				outline: none;
+				box-shadow: 0 0 5px rgba($main-accent, 1);
+				border: 1px solid rgba($main-accent, 1);
+			}
+		}
+		.controls {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 }

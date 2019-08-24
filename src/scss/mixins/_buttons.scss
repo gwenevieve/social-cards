@@ -5,8 +5,10 @@
 	border: unset;
 	font-size: 16px;
 	transition: 0.4s;
+	min-width: 100px;
 	&:hover {
 		transition: 0.4s;
 		background: darken($main-accent, 20%);
+		cursor: pointer;
 	}
 }

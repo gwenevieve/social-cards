@@ -1,18 +1,25 @@
 
 import React from 'react';
 import './scss/app.scss';
+import Avatars from "./components/avatar-post";
+import Cards from "./components/default-post";
+import Image from "./components/image-post";
+import List from "./components/list-post";
 
 function App() {
   return (
-<body>
 	<div className="container">
 		<div className="container-row">
+		<Avatars list={[{"name":"Vancouver", "link":"one"},{"name":"Toronto", "link":"two"}, {"name":"Montreal", "link":"three"}]} name={'Marie'} image={'https://source.unsplash.com/user/erondu/75x75'}/>
+		<Image/>
+		<Cards/>
+		</div>
+		<div className="container-row">
+		<Image/>
+		<Cards/>
+		<List title={'Grocery List'} list={[{"name":"Pineapple"},{"name":"Cheese"},{"name":"Strawberries"},{"name":"Kale"},{"name":"Eggs"}]}/>
 		</div>
 	</div>
-	<footer>
-
-	</footer>
-</body>
 	);
 }
 
