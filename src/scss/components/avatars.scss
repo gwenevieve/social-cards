@@ -31,12 +31,20 @@
 	}
 	&-links {
 		display: flex;
-		flex-direction: column;
-		a {
-			color: $link;
-			margin: 4px 0px;
-			&:hover {
-				color: darken($link, 20%);
+		flex-direction: column; 
+		ul {
+			list-style-type: none;
+			padding: 0px;
+			margin: 0px;
+			li {
+				margin-bottom: 5px;
+				a {
+					color: $link;
+					margin: 4px 0px;
+					&:hover {
+						color: darken($link, 20%);
+					}
+				}
 			}
 		}
 	}
