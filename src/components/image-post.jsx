@@ -46,7 +46,6 @@ export default class Image extends Component {
 	}
 }
 
-
 Image.defaultProps = {
 	author: 'Unknown',
 	image: "https://source.unsplash.com/user/erondu/400x200",

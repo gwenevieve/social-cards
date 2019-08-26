@@ -3,11 +3,6 @@ import PropTypes from 'prop-types';
 
 export default class Cards extends Component {
 
-	constructor(props) {
-		super(props);
-		console.log(this.props);
-	}
-
 	render() {
 		let date = new Date();
 		let day = date.getDate();
@@ -30,7 +25,6 @@ export default class Cards extends Component {
     );
 	}
 }
-
 
 Cards.defaultProps = {
 	title: 'Unknown',

@@ -35,7 +35,6 @@ export default class List extends Component {
 		this.setState({
 			value: event.target.value
 		});
-		console.log(this.state.value);
   }
 
   handleAdd(event) {
@@ -73,7 +72,7 @@ export default class List extends Component {
 				<div className="list">
 					<h1 className="list-title">{this.props.title}</h1>
 					<div className="list-content">
-						<ol>
+						<ol style={{textAlign: Object.keys(this.state.list).length !== 0 ? '' : 'center'}}>       
 						{Object.keys(this.state.list).length !== 0 ? listItems : 'No items found!'}
 						</ol>
 							<div className="list-actions">
@@ -91,7 +90,7 @@ export default class List extends Component {
 				<div className="list">
 					<h1 className="list-title">{this.props.title}</h1>
 					<div className="list-content">
-						<ol>
+						<ol style={{textAlign: Object.keys(this.state.list).length !== 0 ? '' : 'center'}}>       
 							{Object.keys(this.state.list).length !== 0 ? listItems : 'Please add an item'}
 						</ol>
 							<div className="list-actions row">
