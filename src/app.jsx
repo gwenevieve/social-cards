@@ -15,8 +15,6 @@ function App() {
 		<Avatars list={[{"name":"Vancouver", "link":"one"},{"name":"Toronto", "link":"two"}, {"name":"Montreal", "link":"three"}]} name={'Marie'} image={'https://source.unsplash.com/user/erondu/75x75'}/>
 		<Cards/>
 		<News title="Current Weather"/>
-		</div>
-		<div className="container-row">
 		<Image author="Lorem Ipsum"/>
 		<List title={'Grocery List'} list={[{"name":"Pineapple"},{"name":"Cheese"},{"name":"Strawberries"},{"name":"Kale"},{"name":"Eggs"}]}/>
 		</div>

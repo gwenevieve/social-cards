@@ -1,5 +1,12 @@
 .news {
-	width: 25%;
+	width: 90%;
+	margin: 25px 0px;
+	@media screen and (min-width: 768px) {
+		width: 60%;
+	}
+	@media screen and (min-width: 1024px) {
+		flex: 0 0 25.333333%;
+	}
 	@include card-default;
 	&-title {
 		font-size: 22px;
