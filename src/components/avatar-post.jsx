@@ -20,7 +20,7 @@ export default class Avatars extends Component {
 	render() {
 		const list = this.props.list;
 		const listItems = list.map((d, i) =>
-		 <li><a key={i} href={d.link}>{d.name}</a></li>
+		 <li key={i}><a href={d.link}>{d.name}</a></li>
 		 );
 		return (
 			<div onClick={this.handleClick} className={this.state.active ? "active avatars": "avatars"}>
