@@ -8,8 +8,6 @@ import List from "./components/list-post";
 import News from "./components/news-post";
 import ImageSlider from "./components/slider-post";
 
-require('dotenv').config({ silent: process.env.NODE_ENV === 'production' })
-
 function App() {
   return (
 	<div className="container">
