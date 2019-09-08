@@ -13,7 +13,9 @@ export default class List extends Component {
 			list: [
 				{ id: 1, name: 'Peaches' },
 				{ id: 2, name: 'Watermelon' },
-				{ id: 3, name: 'Chicken' }
+				{ id: 3, name: 'Chicken' },
+				{ id: 4, name: "Kale" },
+				{ id: 5, name: "Eggs" }
 			]
 		}
 	this.handleChange = this.handleChange.bind(this);
@@ -105,10 +107,8 @@ export default class List extends Component {
 
 List.defaultProps = {
 	title: 'Unknown',
-	list: [{"name":"Item One"},{"name":"Item Two"}]
 }
 
 List.propTypes = {
 	title: PropTypes.string.isRequired,
-	list: PropTypes.array.isRequired,
 }

@@ -12,7 +12,7 @@ export default class News extends Component {
 				</div>
 				<div className="news-content">
 				<div className="weather">
-					<Weather></Weather>
+					<Weather/>
 				</div>
 					<p>
 						unc ut nisi vulputate, nec feugiat lacus pretium. Suspendisse id tempor augue. Nunc 
