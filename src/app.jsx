@@ -8,7 +8,7 @@ import List from "./components/list-post";
 import News from "./components/news-post";
 import ImageSlider from "./components/slider-post";
 
-require('dotenv').config()
+require('dotenv').config({silent: true})
 
 function App() {
   return (
