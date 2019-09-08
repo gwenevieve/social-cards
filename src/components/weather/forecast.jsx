@@ -18,7 +18,7 @@ export default class Weather extends Component {
 componentDidMount() {
 	let key = process.env.REACT_APP_WEATHERAPI;
 	let city = 'toronto';
-	let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${key}`
+	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${key}`
 	fetch(url)
 		.then(response => {
 			if (response.ok) {
