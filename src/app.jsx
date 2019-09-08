@@ -14,7 +14,7 @@ function App() {
   return (
 	<div className="container">
 		<div className="container-row">
-		<Avatars list={[{"name":"Vancouver", "link":"one"},{"name":"Toronto", "link":"two"}, {"name":"Montreal", "link":"three"}]} name={'Marie'} image={'https://source.unsplash.com/user/erondu/75x75'}/>
+		<Avatars list={[{"name":"Vancouver", "link":"one"},{"name":"Toronto", "link":"two"}, {"name":"Montreal", "link":"three"}]} name={'Marie'}/>
 		<Cards/>
 		<ImageSlider/>
 		<News title="Current Weather"/>

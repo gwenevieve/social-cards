@@ -30,7 +30,7 @@ Cards.defaultProps = {
 	title: 'Unknown',
 	quote: "Pellentesque tincidunt mattis lorem, et tricies quis quam. Obus felis a ultricies.",
 	content: "Pellentesque tincidunt mattis lorem, et tricies quis quam. Obus felis a ultricies. Pellentesque tincidunt mattis lorem, et tricies quis quam. Obus felis a ultricies...",
-	image: "https://source.unsplash.com/user/erondu/400x200",
+	image: require("../../src/img/mountains.jpeg"),
 	cta_link: "#here",
 	cta_text: "View More"
 }

@@ -48,7 +48,7 @@ export default class Image extends Component {
 
 Image.defaultProps = {
 	author: 'Unknown',
-	image: "https://source.unsplash.com/user/erondu/400x200",
+	image: require("../../src/img/forest.jpeg"),
 	quote: 'Praesent eu sem risus. In vitae suscipit sapien, in luctus ante.',
 	cta_link: "#here",
 	cta_text: "View More",

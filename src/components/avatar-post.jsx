@@ -52,7 +52,7 @@ Avatars.defaultProps = {
 	quote: "Praesent eu sem risus. In vitae suscipit sapien, in luctus ante.",
 	content: "Praesent eu sem risus. In vitae suscipit sapien, in luctus ante. Phasellus lobortis rhoncus eros vitae tempus.",
 	list: [{"name":"Link One", "link":"One"},{"name":"Link Two", "link":"Two"}],
-	image: "https://source.unsplash.com/user/erondu/75x75",
+	image: require("../../src/img/profile.jpeg"),
 }
 
 Avatars.propTypes = {

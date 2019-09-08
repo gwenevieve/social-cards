@@ -12,9 +12,9 @@ I wanted to refresh my React skills and learn Lodash.
 
 - [React](https://reactjs.org/)
 - [SCSS](https://sass-lang.com/)
-- [Unsplash API](https://source.unsplash.com/)
 - [OpenWeather API](https://openweathermap.org/)
 - [Lodash](https://lodash.com/)
+- [Unsplash](https://unsplash.com/)
 
 ## How to use?
 
