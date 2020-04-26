@@ -1,53 +1,53 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 
-export default class Avatars extends Component {
-	
-	constructor(props) {
-		super(props);
-		this.state = {
-			active: false,
-    }
-		this.handleClick = this.handleClick.bind(this);
+function Avatars({items, name, quote, content, image, list}) {
+	const [active, setActive] = useState(0);
+
+	const handleClick = () => {
+   setActive("active")
 	}
 
-	handleClick(){
-    this.setState({
-			active: !this.state.active,
-    })
-	}
-
-	render() {
-		const list = this.props.list;
-		const listItems = list.map((d, i) =>
-		 <li key={i}><a href={d.link}>{d.name}</a></li>
-		 );
 		return (
-			<div onClick={this.handleClick} className={this.state.active ? "active avatars": "avatars"}>
+			<div onClick={handleClick} className={active ? "active avatars": "avatars"}>
 				<div className="avatars-header">
-					<img className="avatars-image" alt="avatar" src={this.props.image}></img>
-					<h2 className="avatars-title">{this.props.name}</h2>
+					<img className="avatars-image" alt="avatar" src={image}></img>
+					<h2 className="avatars-title">{name}</h2>
 				</div>
 				<div className="avatars-content">
 					<p className="avatars-quote">
-					{this.props.quote}
+					{quote}
 					</p>
 					<p>
-					{this.props.content}
+					{content}
 					</p>
+					{items.map((item, index) => (
 					<div className="avatars-links">
 						<ul>
-							{listItems}
+							<li key={index}>
+							<a href={item.link}>{item.name}</a>
+							</li>
 						</ul>
 					</div>
+					))}
 
+						{list.map((listItem, index) => (
+					<div className="avatars-links">
+						<ul>
+							<li key={index}>
+							<a href={listItem.link}>{listItem.name}</a>
+							</li>
+						</ul>
+					</div>
+					))}
       	</div>
 			</div>
+						
 		);
 	}
-}
 
 Avatars.defaultProps = {
+	items: PropTypes.array,
 	name: 'Unknown',
 	quote: "Praesent eu sem risus. In vitae suscipit sapien, in luctus ante.",
 	content: "Praesent eu sem risus. In vitae suscipit sapien, in luctus ante. Phasellus lobortis rhoncus eros vitae tempus.",
@@ -63,4 +63,4 @@ Avatars.propTypes = {
 	image: PropTypes.string.isRequired,
 }
 
-
+export default Avatars;

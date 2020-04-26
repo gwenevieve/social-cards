@@ -1,50 +1,41 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faComment, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 
-export default class Image extends Component {
+const Image = (img) => {
+	const [likes, setLikes] = useState(0);
+	const [mouse, setMouseOn] = useState(false);
 
-  constructor(props){
-    super(props)
-    this.state = {
-			active: false,
-    }
-		this.handleMouseEnter = this.handleMouseEnter.bind(this);
-		this.handleMouseLeave = this.handleMouseLeave.bind(this);
-  }
+	const handleLike = () => {
+		setLikes(likes + 1);
+	}
 	
-	handleMouseEnter(){
-		this.setState({
-			active: !this.state.active,
-		})
+	const handleMouseEnter = () => {
+		setMouseOn(true)
 	}
 
-	handleMouseLeave(){
-		this.setState({
-			active: !this.state.active,
-		})
+	const handleMouseLeave = () => {
+		setMouseOn(false)
 	}
 
-	render() {
 		return (
-      <div onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} className={this.state.active ? "active image": "image"}>
-				<img src={this.props.image} alt="card"></img>
+      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={mouse === true ? "active image": "image"}>
+				<img src={img.image} alt="card"></img>
 				<div className="image-details">
-					<p>76 <FontAwesomeIcon icon={faHeart} /></p>
+					<p onClick={handleLike}>{likes} <FontAwesomeIcon icon={faHeart} /></p>
 					<p>956 <FontAwesomeIcon icon={faThumbsUp} /></p>
 					<p>110 <FontAwesomeIcon icon={faComment} /></p>
 				</div>
 				<div className="image-content">
 					<p className="image-quote">
-						"{this.props.quote}"
+						"{img.quote}"
 					</p>
-        	<p className="image-title">Author: {this.props.author}</p>
+        	<p className="image-title">Author: {img.author}</p>
 				</div>
       </div>
     );
 	}
-}
 
 Image.defaultProps = {
 	author: 'Unknown',
@@ -61,3 +52,5 @@ Image.propTypes = {
 	cta_link: PropTypes.string.isRequired,
 	cta_text: PropTypes.string.isRequired,
 }
+
+export default Image;
