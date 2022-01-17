@@ -1,40 +1,40 @@
 .cards {
-	width: 90%;
-	margin: 25px 0px;
-	@media screen and (min-width: 768px) {
-		width: 60%;
-	}
-	@media screen and (min-width: 1024px) {
-		flex: 0 0 25.333333%;
-	}
-	@include card-default;
-	&-title {
-		font-size: 22px;
-		font-weight: $bold;
-	}
-	img {
-		border-radius: 8px 8px 0px 0px;
-		width: 100%;
-	}
-	&-content {
-		padding: 0px 12px 12px;
-		font-size: 16px;
-	}
-	&-footer {
-		background: $main-accent;
-		padding: 12px 0px;
-		border-radius: 0px 0px 7px 7px;
-		text-align: center;
-			a {
-			color: #ffffff;
-			font-size: 18px;
-			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-	&-date {
-		color: #717171!important;
-	}
+  width: 90%;
+  margin: 25px 0;
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
+  @media screen and (min-width: 1024px) {
+    flex: 0 0 25.333333%;
+  }
+  @include card-default;
+  &-title {
+    font-size: 22px;
+    font-weight: $bold;
+  }
+  img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+  }
+  &-content {
+    padding: 0 12px 12px;
+    font-size: 16px;
+  }
+  &-footer {
+    background: $main-accent;
+    padding: 12px 0;
+    border-radius: 0 0 7px 7px;
+    text-align: center;
+    a {
+      color: #ffffff;
+      font-size: 18px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-date {
+    color: #717171 !important;
+  }
 }

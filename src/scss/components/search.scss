@@ -1,7 +1,6 @@
-.title {
-  transition: 0.2s;
-  margin: 25px 0;
+.search {
   width: 90%;
+  margin: 25px 0;
   @media screen and (min-width: 768px) {
     width: 60%;
   }
@@ -25,25 +24,33 @@
   &-content {
     padding: 0 12px 12px;
     margin: 16px 0;
-  }
-  &-actions {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    input {
-      height: 42px;
-      padding: 0 10px;
-      margin-bottom: 20px;
-      margin-left: 10px;
-      font-size: 16px;
-      &::placeholder {
+    justify-content: flex-start;
+    h3 {
+      margin: 0;
+    }
+    form {
+      display: flex;
+      width: 100%;
+      input {
+        height: 42px;
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
         font-size: 16px;
+        &::placeholder {
+          font-size: 16px;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 5px rgba($main-accent, 1);
+          border: 1px solid rgba($main-accent, 1);
+        }
       }
-      &:focus {
-        outline: none;
-        box-shadow: 0 0 5px rgba($main-accent, 1);
-        border: 1px solid rgba($main-accent, 1);
-      }
+    }
+    .list-item {
+      padding: 4px 0;
     }
   }
 }

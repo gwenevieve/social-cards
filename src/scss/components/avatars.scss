@@ -1,63 +1,64 @@
 .avatars {
-	transition: 0.2s;
-	margin: 25px 0px;
-	width: 90%;
-	@media screen and (min-width: 768px) {
-		width: 60%;
-	}
-	@media screen and (min-width: 1024px) {
-		flex: 0 0 25.333333%;
-	}
-	@include card-default;
-	&-header {
-		background: $main-accent;
-		color: #ffffff;
-		display: flex;
+  transition: 0.2s;
+  margin: 25px 0;
+  width: 90%;
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
+  @media screen and (min-width: 1024px) {
+    flex: 0 0 25.333333%;
+  }
+  @include card-default;
+  &-header {
+    background: $main-accent;
+    color: #ffffff;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-		align-items: center;
-		padding: 12px;
-		border-radius: 7px 7px 0px 0px;
-	}
-	&-image {
-		height: auto;
-		border-radius: 50%;
-		background: darken(#f6f6f6, 30%);
-		width: 75px;
-	}
-	&-title {
-		font-weight: $bold;
-		color: #ffffff;
-		font-size: 22px;
-	}
-	&-content {
-		padding: 0px 12px 12px;
-	}
-	&-quote {
-		font-style: italic;
-		font-weight: $light;
-	}
-	&-links {
-		display: flex;
-		flex-direction: column; 
-		ul {
-			list-style-type: none;
-			padding: 0px;
-			margin: 0px;
-			li {
-				margin-bottom: 5px;
-				a {
-					color: $link;
-					margin: 4px 0px;
-					&:hover {
-						color: darken($link, 20%);
-					}
-				}
-			}
-		}
-	}
-	&.active {
-		transition: 0.2s;
-		box-shadow: 3px 3px 15px 4px #9a87ff;
-	}
+    align-items: center;
+    padding: 12px;
+    border-radius: 7px 7px 0 0;
+  }
+  &-image {
+    height: auto;
+    border-radius: 50%;
+    background: darken(#f6f6f6, 30%);
+    width: 75px;
+  }
+  &-title {
+    font-weight: $bold;
+    color: #ffffff;
+    font-size: 22px;
+    margin: 12px 0 0 0;
+  }
+  &-content {
+    padding: 0 12px 12px;
+  }
+  &-quote {
+    font-style: italic;
+    font-weight: $light;
+  }
+  &-links {
+    display: flex;
+    flex-direction: column;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+        margin-bottom: 5px;
+        a {
+          color: $link;
+          margin: 4px 0;
+          &:hover {
+            color: darken($link, 20%);
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    transition: 0.2s;
+    box-shadow: 3px 3px 15px 4px #9a87ff;
+  }
 }

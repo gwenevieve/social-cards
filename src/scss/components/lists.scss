@@ -1,78 +1,78 @@
 .list {
-	width: 90%;
-	margin: 25px 0px;
-	@media screen and (min-width: 768px) {
-		width: 60%;
-	}
-	@media screen and (min-width: 1024px) {
-		flex: 0 0 25.333333%;
-	}
-	@include card-default;
-	&-content {
-		padding: 12px;
-	}
-	&-title {
-		font-size: 22px;
-		font-weight: $bold;
-		text-align: center;
-		background: $main-accent;
-		padding: 20px 0px;
-		color: #ffffff;
-		margin: 0px;
-		border-radius: 8px 8px 0px 0px;
-	}
-	ol {
-		padding: 0px;
-		list-style: none;
-		counter-reset: my-awesome-counter;
-		li {
-			color: $body-copy-color;
-			counter-increment: my-awesome-counter;
-			padding-bottom: 20px;
-			&::before {
-					content: "0" counter(my-awesome-counter);
-					margin-right: 0.5rem;
-					line-height: 1;
-					border-radius: 50%;
-					padding: 5px;
-					background: $main-accent;
-					color: white;
-					font-size: 14px;
-			}
-			.list-delete {
-				float: right;
-				color: $main-accent;
-					&:hover {
-					color: darken($main-accent, 20%);
-					cursor: pointer;
-				}
-			}
-		}
-	}
-	&-actions {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		&.row {
-			flex-direction: row;
-		}
-		input {
-			height: 42px;
-			margin-bottom: 20px;
-			font-size: 16px;
-			&::placeholder {
-				padding-left: 10px;
-				font-size: 14px;
-			}
-			&:focus {
-				outline: none;
-				box-shadow: 0 0 5px rgba($main-accent, 1);
-				border: 1px solid rgba($main-accent, 1);
-			}
-		}
-		.controls {
-			display: flex;
-			justify-content: space-between;
-		}
-	}
+  width: 90%;
+  margin: 25px 0;
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
+  @media screen and (min-width: 1024px) {
+    flex: 0 0 25.333333%;
+  }
+  @include card-default;
+  &-content {
+    padding: 12px;
+  }
+  &-title {
+    font-size: 22px;
+    font-weight: $bold;
+    text-align: center;
+    background: $main-accent;
+    padding: 20px 0;
+    color: #ffffff;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+  }
+  ol {
+    padding: 0;
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    li {
+      color: $body-copy-color;
+      counter-increment: my-awesome-counter;
+      padding-bottom: 20px;
+      &::before {
+        content: "0" counter(my-awesome-counter);
+        margin-right: 0.5rem;
+        line-height: 1;
+        border-radius: 50%;
+        padding: 5px;
+        background: $main-accent;
+        color: white;
+        font-size: 14px;
+      }
+      .list-delete {
+        float: right;
+        color: $main-accent;
+        &:hover {
+          color: darken($main-accent, 20%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &.row {
+      flex-direction: row;
+    }
+    input {
+      height: 42px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      &::placeholder {
+        font-size: 16px;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba($main-accent, 1);
+        border: 1px solid rgba($main-accent, 1);
+      }
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
