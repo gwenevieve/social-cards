@@ -1,12 +1,12 @@
 ## Social Component Cards
 
-A library of component cards I've been adding to as I learn React. 
+To run: 
 
-## Motivation
+yarn install 
+yarn start
 
-I wanted to refresh my React skills and learn Lodash. 
-
-## Tech & Frameworks used
+Add your OpenWeatherMap API key to `.env`
+Add your Mapbox API key to `.env`
 
 <b>Built with</b>
 
@@ -16,7 +16,4 @@ I wanted to refresh my React skills and learn Lodash.
 - [Lodash](https://lodash.com/)
 - [Unsplash](https://unsplash.com/)
 
-## How to use?
-
-To be updated!
 
